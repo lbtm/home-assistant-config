@@ -1,0 +1,170 @@
+title: My Home
+views:
+  - id: 0  # Automatically created id
+    title: Home
+    cards:
+      - id: 3a2751760cca41d4a3deb9eb31dba31a  # Automatically created id
+        type: glance 
+        title: Living Room
+        entities:
+          - fan.xiaomi_miio_device
+          - sensor.fan_xiaomi_fileter_life
+          - light.gateway_light_f0b429b4386a
+          - binary_sensor.door_window_sensor_158d000104baf9
+          - binary_sensor.door_window_sensor_158d000112c789
+          - binary_sensor.motion_sensor_158d000112e0de
+          - sensor.temperature_158d00010306dd
+          - sensor.humidity_158d00010306dd
+      - id: 3e24d4854a51479c9906d1a29d7596fb  # Automatically created id
+        type: glance 
+        title: Waze
+        entities:
+          - sensor.home_to_gare
+          - sensor.home_to_work
+      - id: e8737e5b6cd14eb4a79b7e12b812a86d  # Automatically created id
+        type: glance 
+        title: Internet
+        entities:
+          - sensor.speedtest_ping
+          - sensor.speedtest_download
+          - sensor.speedtest_upload
+      - id: 3804da4de1fc4d8b9e765c9ede5628b2  # Automatically created id
+        type: glance 
+        title: Doors
+        entities:
+          - binary_sensor.door_window_sensor_158d0001179b6b
+          - binary_sensor.door_window_sensor_158d000104baf9
+          - binary_sensor.door_window_sensor_158d000112c789
+          - binary_sensor.door_window_sensor_158d00010626cf
+      - id: e31fe36763d34e9a9212530f272f8ad4  # Automatically created id
+        type: glance 
+        title: Motions
+        entities:
+          - binary_sensor.motion_sensor_158d000112e0de
+          - binary_sensor.motion_sensor_158d00010cf171
+          - binary_sensor.motion_sensor_158d00010e4eee
+      - id: 570bf60d50454a22b11947508afb3b39  # Automatically created id
+        type: glance 
+        title: SDB
+        entities:
+          - sensor.humidity_158d00010306ec
+          - sensor.temperature_158d00010306ec
+      - id: fc992db38d9949b1a9c64c6e271d991f  # Automatically created id
+        type: glance 
+        title: Humidity
+        entities:
+          - sensor.humidity_158d00010306dd
+          - sensor.humidity_158d00010306ec
+          - sensor.humidity_158d00010d13eb
+          - sensor.humidity_158d00011077c7
+          - sensor.humidity_158d0001173b3f
+      - id: ea4e8535235c4c4bbc7e83cd1c54f56d  # Automatically created id
+        type: glance 
+        title: Temperature
+        entities:
+          - sensor.temperature_158d00010306dd
+          - sensor.temperature_158d00010d13eb
+          - sensor.temperature_158d00011077c7
+          - sensor.temperature_158d0001173b3f
+      - id: e834387561044a9b9d0b607e4d2d3f02  # Automatically created id
+        type: glance 
+        title: Chambres
+        entities:
+          - sensor.humidity_158d00010d13eb
+          - sensor.temperature_158d00010d13eb
+          - sensor.humidity_158d00011077c7
+          - sensor.temperature_158d00011077c7
+          - sensor.humidity_158d0001173b3f
+          - sensor.temperature_158d0001173b3f
+  - id: 1  # Automatically created id
+    title: Media
+    cards:
+      - id: 4d1c3204755a441da83e04814f901ea2  # Automatically created id
+        type: media-control
+        entity: media_player.emby__samsung_tv__samsung_ue46f6400
+      - id: ac6c17d8f56e4e288510c32b45469231  # Automatically created id
+        type: media-control
+        entity: media_player.emby__emby_for_android_mobile__smg935f
+      - id: 03bc0d973800438ba24703da207e7626  # Automatically created id
+        type: media-control
+        entity: media_player.kodi_openeleclocal
+      - id: 57d9b69175be4d35bcd025a29a000b9f  # Automatically created id
+        type: media-control
+        entity: media_player.samsung_led46_ue46f6400
+      - id: 8bce73072a12461b8e7727c4431a0f4e  # Automatically created id
+        type: media-control
+        entity: media_player.room
+  - id: 2  # Automatically created id
+    title: System
+    cards:
+      - id: 51fd62f29a48401286023da348dbaced  # Automatically created id
+        type: glance 
+        entities:
+          - sensor.processor_use
+          - sensor.disk_use_percent_
+          - sensor.memory_use_percent
+          - sensor.load_1m
+          - sensor.network_in_enp2s0
+          - sensor.network_out_enp2s0
+          - sensor.last_boot
+  - id: 3  # Automatically created id
+    title: Security
+    cards:
+      - id: d4305d1d27eb439391d23a2872a5d859  # Automatically created id
+        type: glance 
+        entities:
+          - binary_sensor.motion_sensor_158d000112e0de
+          - binary_sensor.door_window_sensor_158d0001179b6b
+          - binary_sensor.door_window_sensor_158d000104baf9
+          - binary_sensor.door_window_sensor_158d000112c789
+  - id: 4  # Automatically created id
+    title: Batteries
+    cards:
+      - type: gauge
+        name: Bureau
+        entity: sensor.bureau_sensor_battery
+      - type: gauge
+        name: Chambre1
+        entity: sensor.chambre1_sensor_battery
+      - type: gauge
+        name: Chambre2
+        entity: sensor.chambre2_sensor_battery
+      - type: gauge
+        name: SDB
+        entity: sensor.sdb_sensor_battery
+      - type: gauge
+        name: Salon_sensor
+        entity: sensor.salon_sensor_battery
+      - type: gauge
+        name: Salon_motion
+        entity: sensor.salon_motion_battery
+      - type: gauge
+        name: Escalier
+        entity: sensor.escalier_motion_battery
+      - type: gauge
+        name: Entree
+        entity: sensor.entree_door_battery
+      - type: gauge 
+        name: PFenetreDroite
+        entity: sensor.pfd_door_battery
+      - type: gauge 
+        name: PFenetreGauche
+        entity: sensor.pfg_door_battery
+      - type: gauge 
+        name: Debarras
+        entity: sensor.debarras_door_battery
+        severity:
+          green: 85
+          yellow: 45
+          red: 25
+  - id: 5  # Automatically created id
+    title: Everything Else
+    cards:
+      - id: 49b59093925a4b3d878ce879ca1f6264  # Automatically created id
+        type: entities
+        title: all devices
+        show_header_toggle: true
+        entities:
+          - group.all_lights
+          - group.all_devices
+          - group.all_fans

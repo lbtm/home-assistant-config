@@ -1,0 +1,109 @@
+- platform: systemmonitor
+  resources:
+    - type: disk_use_percent
+      arg: /home
+    - type: disk_use_percent
+      arg: /
+    - type: memory_use_percent
+    - type: network_in
+      arg: enp2s0
+    - type: network_out
+      arg: enp2s0
+    - type: last_boot
+    - type: processor_use
+    - type: load_1m
+    - type: last_boot
+
+
+- platform: waze_travel_time
+  name: "Home_to_gare"
+  origin: !secret waze_origin
+  destination: !secret waze_destination_1 
+  region: 'EU'
+
+- platform: waze_travel_time
+  name: "Home_to_work"
+  origin: !secret waze_origin
+  destination: !secret waze_destination_2
+  region: 'EU'
+
+- platform: speedtest
+  minute:
+    - 0
+    - 30
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+
+- platform: pi_hole
+
+- platform: yr
+
+- platform: meteo_france
+  postal_code: !secret zip_code
+  monitored_conditions:
+    - temperature
+    - weather
+    - wind_speed
+    - uv
+    - next_rain
+    - freeze_chance
+    - rain_chance
+    - snow_chance
+    - thunder_chance
+
+- platform: template
+  sensors:
+    fan_xiaomi_fileter_life:
+      value_template: '{{ states.fan.xiaomi_miio_device.attributes.filter_life_remaining }}'
+      friendly_name: 'Air purifier filter life'
+      unit_of_measurement: '%'
+    bureau_sensor_battery:
+      value_template: '{{ states.sensor.temperature_158d0001173b3f.attributes.battery_level }}'
+      friendly_name: 'Bureau sensor'
+      unit_of_measurement: '%'
+    bureau_motion_battery:
+      value_template: '{{ states.binary_sensor.motion_sensor_158d00010e4eee.attributes.battery_level }}'
+      friendly_name: 'Bureau motion'
+      unit_of_measurement: '%'
+    chambre1_sensor_battery:
+      value_template: '{{ states.sensor.temperature_158d00010d13eb.attributes.battery_level }}'
+      friendly_name: 'Chambre1 sensor'
+      unit_of_measurement: '%'
+    chambre2_sensor_battery:
+      value_template: '{{ states.sensor.temperature_158d00011077c7.attributes.battery_level }}'
+      friendly_name: 'Chambre2 sensor'
+      unit_of_measurement: '%'
+    sdb_sensor_battery:
+      value_template: '{{ states.sensor.temperature_158d00010306ec.attributes.battery_level }}'
+      friendly_name: 'Salle de bain sensor'
+      unit_of_measurement: '%'
+    salon_sensor_battery:
+      value_template: '{{ states.sensor.temperature_158d00010306dd.attributes.battery_level }}'
+      friendly_name: 'Salon sensor'
+      unit_of_measurement: '%'
+    salon_motion_battery:
+      value_template: '{{ states.binary_sensor.motion_sensor_158d000112e0de.attributes.battery_level }}'
+      friendly_name: 'Salon motion'
+      unit_of_measurement: '%'
+    escalier_motion_battery:
+      value_template: '{{ states.binary_sensor.motion_sensor_158d00010cf171.attributes.battery_level }}'
+      friendly_name: 'Escalier motion'
+      unit_of_measurement: '%'
+    entree_door_battery:
+      value_template: '{{ states.binary_sensor.door_window_sensor_158d0001179b6b.attributes.battery_level }}'
+      friendly_name: 'Entree door'
+      unit_of_measurement: '%'
+    pfd_door_battery:
+      value_template: '{{ states.binary_sensor.door_window_sensor_158d000104baf9.attributes.battery_level }}'
+      friendly_name: 'Porte-fenêtre-Droite'
+      unit_of_measurement: '%'
+    pfg_door_battery:
+      value_template: '{{ states.binary_sensor.door_window_sensor_158d000112c789.attributes.battery_level }}'
+      friendly_name: 'Porte-fenêtre-Gauche'
+      unit_of_measurement: '%'
+    debarras_door_battery:
+      value_template: '{{ states.binary_sensor.door_window_sensor_158d00010626cf.attributes.battery_level }}'
+      friendly_name: 'Debarras'
+      unit_of_measurement: '%'

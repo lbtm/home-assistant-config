@@ -1,0 +1,11 @@
+#automation:
+#  - alias: Evening Greeting
+#    trigger:
+#      platform: sun
+#      event: sunset
+#    action:
+#      service: notify.discord
+#      data:
+#        message: 'Good Evening'
+#        target:
+#          - '506907032398462996'
