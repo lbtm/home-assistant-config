@@ -60,6 +60,6 @@ My current HA version:  0.85.1
 
 # Screenshots
 #### HA Dashboard
-![Home](screenshots/HADashboardHome.png)
+![Home](screenshots/HAHome.png)
 
 | [Go to Menu](#menu) |
