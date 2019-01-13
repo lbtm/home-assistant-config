@@ -2,7 +2,7 @@
 
 Here's my [Home Assistant](https://home-assistant.io/) configuration. I have installed HA on an [HP ProLiant MicroServer G7](https://amzn.to/2CXyVs0) with [8GB RAM](https://amzn.to/2TBaAxs) and [240GB SSD](https://amzn.to/2TyWfBR). I am currently running Fedora 29 Server on the MicroServer G7 and used the [alternative-install-on-generic-linux-server](https://www.home-assistant.io/hassio/installation/#alternative-install-on-generic-linux-server) approach to install HA.
 
-My current HA version:  0.84.6
+My current HA version:  0.85.1
 
 
 # <a name="menu">Menu</a>
@@ -58,5 +58,8 @@ My current HA version:  0.84.6
 
 **All of my configuration files are tested against the most stable version of home-assistant using [Travis](https://travis-ci.org/lbtm/home-assistant-config).**
 
+# Screenshots
+#### HA Dashboard
+![Home](screenshots/HADashboardHome.png)
 
 | [Go to Menu](#menu) |
